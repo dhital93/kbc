@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<link rel="stylesheet" type="text/css" href="login.css">
+	<meta charset="UTF-8">
+	<title>login</title>
+</head>
+<body>
+	<div id="container">
+		<form action="">
+		<input type="text" name="username" placeholder="username" id="username" required> <br>
+		<input type="password" name="password" placeholder="password" id="password" required><br>
+		<input type="checkbox" name="" onclick="passwordview()">Click too see Password<br>
+		<h4 id="mistake"></h4>
+		<button type="button" value="login" id="submit" onclick="login(),displayname()">login</button>
+		</form>
+	</div>
+	<script>
+		var user=[{
+			username:"prabin",
+			password:"dhital"},
+			{
+				username:"anish",
+				password:"kandel",
+			}];
+		function login(){
+			var username = document.getElementById('username').value;
+			var password = document.getElementById('password').value;
+			for(i=0;i<user.length;i++){
+				if(username == user[i].username && password == user[i].password){
+					window.open('file:///E:/projects/login/software.html','_self');
+				}
+			
+			else{
+				document.getElementById('mistake').innerHTML="user name or password is wrong";
+			}
+							
+			
+			}
+
+		}
+		function displayname(){
+			var name= document.getElementById('username').value;
+			window.localStorage.setItem("username1",name);
+		}
+		//to make password visiable
+		function passwordview(){
+			var passworduser =document.getElementById("password");
+			if(passworduser.type === "password"){
+				passworduser.type="text";
+			}
+			else{
+				passworduser.type="password";
+		}
+		}
+	</script>
+	
+</body>
+</html>

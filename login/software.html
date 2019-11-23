@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<link rel="stylesheet" href="software.css">
+	<meta charset="UTF-8">
+	<title>software</title>
+</head>
+<body onload="displayname()">
+	<form name="container" id="container">
+		<textarea type="text" name="textview" id="textview" disabled></textarea>
+		<textarea type="text" name="textviewone" id="textviewone" disabled></textarea>
+		<input type="text" name="total" id="total">
+		<p class="total">TOTAL:</p>
+		<table >
+			<tr>
+				<td><button type="button" onclick="displaya()">apple (RS.40)</button></td>
+				<td><button type="button" onclick="banana()">banana (RS.50)</button></td>
+				<td><button type="button" onclick="mango()">mango (RS.100)</button></td>
+			</tr>
+			<tr>
+				<td><button type="button" onclick="rice()">Rice (RS.100)</button></td>
+				<td><button type="button" onclick="dal()">Dal (RS.150)</button></td>
+				<td><button type="button" onclick="chana()">chana (RS.90)</button></td>
+			</tr>
+			<tr>
+				<td><button type="button" onclick="toothpaste()">toothpaste (RS.200)</button></td>
+				<td><button type="button" onclick="colaN()">cola normal (RS.150)</button></td>
+				<td><button type="button" onclick="colaZ()">cola zero(RS.145)</button></td>
+			</tr>
+		</table>
+		<table id="one">
+			<tr>
+				<td><button type="button" class="delet" onclick="delet(),bc()"></button></td>
+				<td><button type="button" class="clear" onclick="clear()">clear</button></td>
+			</tr>
+
+		</table>
+		<div class="cash">
+		<form name="calculator" class="">
+		<input type="text" name="textview" class="moneyvalue" id="moneyvalue" disabled>
+		<table class="button">
+			<tr>
+				<td><button type="button" id="c" value="C" onclick="bc()">C</button></td>
+				<td><button type="button" id="plus" value="+/-" onclick="back()">⌦</button></td>
+				<td><button type="button" id="percent" value="%" onclick="bpercent()">D</button></td>
+			</tr>
+			<tr>
+				<td><button type="button" value="7" onclick="bseven()">7</button></td>
+				<td><button type="button" value="8" onclick="beight()">8</button></td>
+				<td><button type="button" value="9" onclick="bnine()">9</button></td>
+				
+			</tr>
+			<tr>
+				<td><button type="button" value="4" onclick="bfour()">4</button></td>
+				<td><button type="button" value="5" onclick="bfive()">5</button></td>
+				<td><button type="button" value="6" onclick="bsix()">6</button></td>
+				
+			</tr>
+			<tr>
+				<td><button type="button" value="1" onclick="bone()">1</button></td>
+				<td><button type="button" value="2" onclick="btwo()">2</button></td>
+				<td><button type="button" value="3" onclick="bthree()">3</button></td>
+				
+			</tr>
+			<tr>
+				<td><button type="button" value="0" onclick="bzero()">0</button></td>
+				<td><button type="button" value="." onclick="bpoint()">.</button></td>
+				<td><button type="button" value="00" onclick="bdzero()">00</button></td>
+				<td><button type="button" value="=" id="equal" onclick="returnvalue()">⏎</button></td>
+			</tr>
+		</table>
+	</form>
+		</div>
+		<div id="usser"></div>
+		</form>
+	<script type="text/javascript">
+		//i use \n is to break the line...
+		function displaya(){
+			document.getElementById('textview').value+="apple RS"+"\n";
+			document.container.textviewone.value+="+"+40+"\n";
+		}
+		function banana(){
+			document.getElementById('textview').value+="banana RS"+"\n";
+			document.container.textviewone.value+="+"+50+"\n";
+		}
+		function mango(){
+			document.getElementById('textview').value+="mango RS"+"\n";
+			document.container.textviewone.value+="+"+100+"\n";
+		}
+		function rice(){
+			document.getElementById('textview').value+="Rice RS"+"\n";
+			document.container.textviewone.value+="+"+100+"\n";
+		}
+		function dal(){
+			document.getElementById('textview').value+="Dal RS"+"\n";
+			document.container.textviewone.value+="+"+150+"\n";
+		}
+		function chana(){
+			document.getElementById('textview').value+="chana RS"+"\n";
+			document.container.textviewone.value+="+"+90+"\n";
+		}
+		function toothpaste(){
+			document.getElementById('textview').value+="toothpaste RS"+"\n";
+			document.container.textviewone.value+="+"+200+"\n";
+		}
+		function colaN(){
+			document.getElementById('textview').value+="cola normal RS "+"\n";
+			document.container.textviewone.value+="+"+150+"\n";
+		}
+		function colaZ(){
+			document.getElementById('textview').value+="cola Zero RS "+"\n";
+			document.container.textviewone.value+="+"+145+"\n";
+		}
+		function delet(){
+			document.getElementById('textview').value="";
+			document.container.textviewone.value="";
+		}
+		function clear(){
+			var num = document.getElementById('textview').value;
+			document.getElementById('textview').value= num.substr(0,num.length-1);
+		}
+		
+		function add(){
+			var num = document.getElementById('textviewone').value;
+			var equal = eval(document.getElementById('textviewone').value);
+			document.getElementById('total').value=equal;
+		}
+		setInterval(add,100);
+	//progamming  of cash side 	using javascript
+	function bone(){
+		document.getElementById('moneyvalue').value+=1;
+	}
+	function btwo(){
+		document.getElementById('moneyvalue').value+=2;
+		}
+		function bthree(){
+			document.getElementById('moneyvalue').value+=3;
+		}
+		function bfour(){
+			document.getElementById('moneyvalue').value+=4;
+		}
+		function bfive(){
+			document.getElementById('moneyvalue').value+=5;
+		}
+		function bsix(){
+			document.getElementById('moneyvalue').value+=6;
+		}
+		function bseven(){
+			document.getElementById('moneyvalue').value+=7;
+		}
+		function beight(){
+			document.getElementById('moneyvalue').value+=8;
+		}
+		function bnine(){
+			document.getElementById('moneyvalue').value+=9;
+		}
+		function bzero(){
+			document.getElementById('moneyvalue').value+=0;
+		}
+		function bdzero(){
+			document.getElementById('moneyvalue').value+="00";
+		}
+		function bc(){
+			document.getElementById('moneyvalue').value="";
+		}
+		function back(){
+			var num = document.getElementById('moneyvalue').value;
+			document.getElementById('moneyvalue').value=num.substr(0,num.length-1);
+		}
+		//programming to calculate the return value
+		function returnvalue(){
+			var amount = document.getElementById('total').value;
+			var moneyvalue = document.getElementById('moneyvalue').value;
+			var result =  moneyvalue - amount;
+		alert("The money that you have to return is Rs " + result);
+
+		}
+		function displayname(){
+			document.getElementById('usser').innerHTML=window.localStorage.getItem("username1");
+		}
+
+
+
+
+	</script>
+	
+	
+	
+
+</body>
+</html>

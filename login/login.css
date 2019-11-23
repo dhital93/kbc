@@ -1,0 +1,118 @@
+body{
+	margin-top: 80px auto;
+	padding: 0px;
+	background-image: url(buddha.jpg);
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	align-items: center;
+	background-position: center center;
+
+}
+#container{
+	margin-top: 20px;
+	display: flex;
+	height: 500px;
+	width: 400px;
+	background-color:blue;
+	opacity: 0.8;
+	justify-content: center;
+	text-align: center;
+	padding-top: 50px;
+	border-top-right-radius: 80px;
+	border-bottom-left-radius: 80px;
+	
+	}
+	form{
+		margin-top: 100px;
+		padding-top: 20px;
+
+	}
+	#username{
+		width: 80%;
+		height: 30px;
+		margin-bottom: 10px;
+		font-size: 20px;
+		border-top: none;
+		border-left:none;
+		border-right: none;
+		background-color: blue;
+		color: yellow;
+		outline: none;
+}
+#password{
+	width: 80%;
+		height: 30px;
+		margin-bottom: 10px;
+		font-size: 20px;
+		border-top: none;
+		border-left:none;
+		border-right: none;
+		background-color: blue;
+		color: yellow;
+		outline: none;
+}
+#submit{
+	width: 80%;
+	height: 30px;
+	background-color: black;
+	color: white;
+	border-radius: 30px;
+	outline: none;
+
+}
+#mistake{
+position: relative;
+font-size: 20px;
+color: yellow;
+}
+ @media (max-width: 800px) {
+ 	#container{
+	display: flex;
+	height: 700px;
+	width: 500px;
+	background-color:blue;
+	opacity: 0.8;
+	justify-content: center;
+	text-align: center;
+	padding-top: 50px;
+	border-top-right-radius: 80px;
+	border-bottom-left-radius: 80px;
+ }
+	#username{
+		width: 100%;
+		height: 30px;
+		margin-bottom: 10px;
+		font-size: 20px;
+		border-top: none;
+		border-left:none;
+		border-right: none;
+		background-color: blue;
+		color: yellow;
+		outline: none;
+	}
+	#password{
+	width: 100%;
+		height: 30px;
+		margin-bottom: 10px;
+		font-size: 20px;
+		border-top: none;
+		border-left:none;
+		border-right: none;
+		background-color: blue;
+		color: yellow;
+		outline: none;
+}
+#submit{
+	width: 100%;
+	height: 30px;
+	background-color: black;
+	color: white;
+	border-radius: 30px;
+	outline: none;
+
+}
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="kbc.css" />
+    <meta charset="UTF-8" />
+    <title>kbc</title>
+  </head>
+  <body>
+    <div id="container">
+      <div><h4 id="question"></h4></div>
+      <button id="a" onclick="namebutton(1), findans()">
+        <h4 id="ansone"></h4>
+      </button>
+      <button id="b" onclick="namebutton(2), findans()">
+        <h4 id="anstwo"></h4>
+      </button>
+      <button id="c" onclick="namebutton(3), findans()">
+        <h4 id="ansthree"></h4>
+      </button>
+      <button id="d" onclick="namebutton(4), findans()">
+        <h4 id="ansfour"></h4>
+      </button>
+    </div>
+    <div id="playbox">
+      <button id="play" onclick="number(), question(),nodisplay(),play()">
+        play
+      </button>
+    </div>
+    <div id="resultbox">
+      <h4 id="result"></h4>
+      <button id="yes" onclick="number(), question(),next()">yes</button>
+      <button id="no" onclick="end()">No</button>
+    </div>
+    <input type="text" id="userans" />
+    <input type="number" id="random" />
+    <script>
+      //fuction to identify the button answer
+      function namebutton(x) {
+        if (x == 1) {
+          document.getElementById("userans").value = 1;
+        } else if (x == 2) {
+          document.getElementById("userans").value = 2;
+        } else if (x == 3) {
+          document.getElementById("userans").value = 3;
+        } else if (x == 4) {
+          document.getElementById("userans").value = 4;
+        }
+      }
+      //function to select the random number.
+      function number() {
+        var num = Math.floor(Math.random() * 4);
+        document.getElementById("random").value = num;
+      }
+      //function to call change the random question
+      function question() {
+        var x = document.getElementById("random").value;
+        if (x == 1) {
+          document.getElementById("question").innerHTML =
+            "what is the capital of nepal?";
+          document.getElementById("a").innerHTML = "pokhara";
+          document.getElementById("b").innerHTML = "Dharan";
+          document.getElementById("c").innerHTML = "Kathmandu";
+          document.getElementById("d").innerHTML = "hetauda";
+        } else if (x == 2) {
+          document.getElementById("question").innerHTML =
+            "wat is the capital of Europe?";
+          document.getElementById("a").innerHTML = "Portugal";
+          document.getElementById("b").innerHTML = "Poland";
+          document.getElementById("c").innerHTML = "Finland";
+          document.getElementById("d").innerHTML = "Belgium";
+        } else if (x == 0) {
+          document.getElementById("question").innerHTML =
+            "नेपाल सरकारले जनताका गुनासा सुन्न सुरु गरेको‘हेलो सरकार‘को निशुल्क फोन नं कति हो?";
+          document.getElementById("a").innerHTML = "1111";
+          document.getElementById("b").innerHTML = "112";
+          document.getElementById("c").innerHTML = "1113";
+          document.getElementById("d").innerHTML = "111";
+        } else if (x == 3) {
+          document.getElementById("question").innerHTML =
+            " बर्षाको मात्रा नाप्ने यन्त्रलाइ के भनिन्छ ?";
+          document.getElementById("a").innerHTML = " रेन गज";
+          document.getElementById("b").innerHTML = "प्रोवोसिस";
+          document.getElementById("c").innerHTML = "ल्याटिन";
+          document.getElementById("d").innerHTML = "एडमण्ड हेली";
+        }
+      }
+      //to make the play button invisiable
+      function nodisplay() {
+        document.getElementById("playbox").style.display = "none";
+      }
+      //function find the answer is correct or not
+      function findans() {
+        var win = new Audio();
+        win.src = "cong.aac";
+        var over = new Audio();
+        over.src = "over.aac";
+        var que = document.getElementById("question").innerHTML;
+        var clickans = document.getElementById("userans").value;
+        var result = document.getElementById("result").innerHTML;
+        if (que == "what is the capital of nepal?" && clickans == 3) {
+          document.getElementById("resultbox").style.display = "block";
+          document.getElementById("result").innerHTML = "congrulation ";
+          win.play();
+        } else if (que == "wat is the capital of Europe?" && clickans == 4) {
+          document.getElementById("resultbox").style.display = "block";
+          document.getElementById("result").innerHTML = "congrulation ";
+          win.play();
+        } else if (
+          que ==
+            "नेपाल सरकारले जनताका गुनासा सुन्न सुरु गरेको‘हेलो सरकार‘को निशुल्क फोन नं कति हो?" &&
+          clickans == 1
+        ) {
+          document.getElementById("resultbox").style.display = "block";
+          document.getElementById("result").innerHTML = "congrulation ";
+          win.play();
+        } else if (
+          que == " बर्षाको मात्रा नाप्ने यन्त्रलाइ के भनिन्छ ?" &&
+          clickans == 1
+        ) {
+          document.getElementById("resultbox").style.display = "block";
+          document.getElementById("result").innerHTML = "congrulation ";
+          win.play();
+        } else {
+          document.getElementById("resultbox").style.display = "block";
+          document.getElementById("result").innerHTML = "sorry you losse ";
+          over.play();
+        }
+      }
+      function play() {
+        var sound = new Audio();
+        sound.src = "kbc_theme.mp3";
+        sound.play();
+      }
+      function next() {
+        document.getElementById("resultbox").style.display = "none";
+      }
+      function end() {
+        window.location.reload();
+      }
+    </script>
+  </body>
+</html>

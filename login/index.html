@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>register</title>
+</head>
+<body>
+	<div id="login">
+		<input type="text" placeholder="user name" id="username"><br>
+		<input type="password" name="password" placeholder="password" id="password"><br>
+		<input type="submit" name="submit" value="submit">
+		
+	</div>
+
+	<form action="register" id="register">
+		<input type="text" name="username" id="usernamer" required="" placeholder="user name"><br>
+		<input type="email" name="email" id="email" required="" placeholder="email"><br>
+		<input type="date" name="date" required id="date" ><br>
+		<input type="password" name="password" required="" id="password" placeholder="password"><br>
+		<input type="password" name="password" required="" id="confirm passwordr" placeholder="confirmpassword"><br>
+		<input type="submit" name="submit" value="register" id="register" onclick="adduser(),inter()" >
+
+	</form>
+	<script type="text/javascript">
+		var username1 = [];
+		var userpass =[];
+
+		function adduser(){
+			var username = document.getElementById('usernamer').value;
+			
+			var add =username1.push(usernamer);
+		}
+
+		 function inter(){
+		 	var userpassword=document.getElementById('passwordr').value;
+		 	var add =userpass.push(userpassword);
+		 	console.log(add);
+		 }
+		
+		
+
+	</script>
+
+	
+</body>
+</html>

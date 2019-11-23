@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(cover.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+#container {
+  position: relative;
+
+  height: 500px;
+  width: 100%;
+  top: 200px;
+}
+#question {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 50px;
+  width: 90%;
+  margin-left: 20px;
+  margin-right: 20px;
+  border: solid red;
+  margin-top: 10px;
+  padding-top: 10px;
+  color: white;
+  font-size: 40px;
+  padding-left: 20px;
+}
+#a {
+  position: absolute;
+  height: 80px;
+  width: 500px;
+  border: solid red;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-left: 20px;
+  color: white;
+  font-size: 40px;
+}
+#b {
+  position: absolute;
+  height: 80px;
+  width: 500px;
+  border: solid red;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-left: 840px;
+  color: white;
+  font-size: 40px;
+}
+#c {
+  position: absolute;
+  height: 80px;
+  width: 500px;
+  border: solid red;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-left: 20px;
+  top: 250px;
+  color: white;
+  font-size: 40px;
+}
+#d {
+  position: absolute;
+  height: 80px;
+  width: 500px;
+  border: solid red;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-left: 840px;
+  top: 250px;
+  color: white;
+  font-size: 40px;
+}
+#play {
+  position: relative;
+  top: 40px;
+  left: 40px;
+  background-color: red;
+  height: 80px;
+  width: 300px;
+  border: solid black;
+  color: white;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+}
+#play:hover {
+  background-color: white;
+  color: black;
+}
+#d:hover {
+  background-color: yellow;
+  color: black;
+}
+#a:hover {
+  background-color: yellow;
+  color: black;
+}
+#b:hover {
+  background-color: yellow;
+  color: black;
+}
+#c:hover {
+  background-color: yellow;
+  color: black;
+}
+#playbox {
+  position: relative;
+  height: 200px;
+  width: 400px;
+  background-color: blue;
+  left: 30%;
+  top: -170px;
+}
+#resultbox {
+  position: absolute;
+  border-radius: 20px;
+  height: 200px;
+  width: 400px;
+  background-color: black;
+  left: 30%;
+  top: 300px;
+  color: white;
+  display: none;
+  border: 5px red solid;
+}
+#yes {
+  position: relative;
+  left: 50px;
+  top: 120px;
+}
+#no {
+  position: relative;
+  left: 180px;
+  top: 120px;
+}
+#result {
+  margin-left: 20%;
+  margin-top: 0px;
+  font-size: 30px;
+}
+#resultbox button {
+  background-color: red;
+  width: 50px;
+  height: 40px;
+  border-radius: 10px;
+  margin-top: -20px;
+  outline: none;
+  border: 2px blue solid;
+}
